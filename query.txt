@@ -1,0 +1,76 @@
+Host
+ec2-52-73-247-67.compute-1.amazonaws.com
+Database
+d792m7rlrtacju
+User
+othednmwspijbu
+Port
+5432
+Password
+9438a113d1059a7fe4ee6687531109ebe088989ae644dea0eef0852e278d09b0
+URI
+postgres://othednmwspijbu:9438a113d1059a7fe4ee6687531109ebe088989ae644dea0eef0852e278d09b0@ec2-52-73-247-67.compute-1.amazonaws.com:5432/d792m7rlrtacju
+Heroku CLI
+heroku pg:psql postgresql-contoured-61226 --app food-soa-api
+
+ALTER TABLE food 
+DROP COLUMN;
+
+CREATE TABLE food(
+   title VARCHAR(1000) NOT NULL,
+   cuisine VARCHAR (1000) NOT NULL,
+   image VARCHAR (1000),
+   ingredients VARCHAR (10000) NOT NULL,
+   instructions VARCHAR (10000) NOT NULL
+);
+
+
+SELECT title FROM food WHERE cuisine = 'India' AND ingredients = '600 gm basmati rice, 4 tablespoon mint leaves, salt as required, 2 teaspoon coriander powder,
+1 tablespoon garlic paste,
+2 tablespoon tomato puree,
+400 gm white onion,
+8 green cardamom,
+1 tablespoon milk,
+1 kilograms chicken thighs,
+1 teaspoon garam masala powder,
+2 pinches saffron,
+1 tablespoon ginger paste,
+4 green chilli,
+300 gm tomato,
+2 teaspoon cumin seeds,
+6 tablespoon refined oil,
+1/2 teaspoon chilli powder,
+6 tablespoon plain greek yogurt,
+1 teaspoon powdered turmeric';
+
+
+DELETE FROM food WHERE title = 'Cheese Garlic Bread Recipe';
+
+SELECT title FROM food WHERE cuisine = 'india' AND image = 'https://firebasestorage.googleapis.com/v0/b/soa-main.appspot.com/o/briyani.jpg?alt=media&token=b17a443f-4a2d-4442-a159-cd6857d4da4a';
+
+INSERT INTO food (title, cuisine,image,ingredients,instructions)
+VALUES
+   ('Coconut chutney Recipe','India','https://firebasestorage.googleapis.com/v0/b/soa-main.appspot.com/o/coconut-chutney_806x605_51505381902.jpg?alt=media&token=d52f6bf0-a0ad-44e6-a66b-e9c492857e11','1 Cup Shredded Coconut or Coconut Powder
+1 Medium Sized Onion
+3-4 Green Chillies
+~2 inch Piece of Ginger
+2 Tablespoon Cup Plain Curd (Yoghurt)
+8-10 Curry leaves
+3 Pieces of Whole Dry Red Chilies
+1 Teaspoon Mustard Seeds
+1 Teaspoon Split Urad Dal
+1 Teaspoon Jeera (Cumin Seeds)
+1 Teaspoon Salt or as per taste
+1 Tablespoon Oil.
+','
+Step 1:Put the coconut powder or small pieces of fresh coconut in a grinder & grind them to a fine powder or paste.
+Step 2:Cut small pieces of onion along with green chilies and ginger. Add these to the coconut powder/paste in the blender. Add salt and curd(yoghurt) to this mixture
+Step 3:Add 1 teaspoon of Jeera (Cumin Seeds) and 1 teaspoon Salt (or according to taste) to the mixture.
+Step 4:Then add 1/2 Cup of Plain Curd (Yogurt). You can also replace Curd with 1 Teaspoon of concentrated Tamarind Pulp.
+Step 5:Grind the mixture to a paste, adding some water if required to adjust the consistency.
+Step 6:To prepare the tempering heat oil in a pan. Keep ready 1 teaspoon each of mustard seeds and split urad dal along with curry leaves and whole dried red chillies.
+Step 7:When the oil is hot add mustard seeds to it. When the mustard seeds start crackling, add urad dal and fry till it gets a golden color.
+Step 8:Add Curry leaves and pieces of whole dry red chilies. Fry for a few seconds and then turn off the heat.
+Step 9:Pour the seasoning over the prepared chutney paste and mix it well. You can refrigerate the chutney before serving.
+Step 10:Coconut Chutney is ready. Served it as a dip with Dosas, Idli, Vadas or any other snacks of your choice.
+');
