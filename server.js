@@ -19,12 +19,7 @@ var admin = require("firebase-admin");
 
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'othednmwspijbu',
-  host: 'ec2-52-73-247-67.compute-1.amazonaws.com',
-  database: 'd792m7rlrtacju',
-  password: '9438a113d1059a7fe4ee6687531109ebe088989ae644dea0eef0852e278d09b0',
-  port: 5432,
-  ssl:true
+
 
 })
 // const pgp = require('pg-promise')(/* initialization options */);
